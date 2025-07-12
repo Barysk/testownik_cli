@@ -5,6 +5,8 @@ import "core:math/rand"
 import "core:terminal/ansi"
 import "core:strings"
 import "core:time"
+import "core:c/libc"
+import "core:os"
 
 ANSI_I :: ansi.CSI + ansi.FG_CYAN + ansi.SGR    // info
 ANSI_S :: ansi.CSI + ansi.FG_GREEN + ansi.SGR   // super
@@ -292,11 +294,11 @@ clear_term :: proc(config: ^Config) {
     if config.ansimode {
         fmt.print("\x1b[2J\x1b[H")
     } else {
-        for i in 0..=63 {
-            fmt.print("\n")
+        if os.OS == .Windows {
+            libc.system("cls")
+        } else {
+            libc.system("clear")
         }
-        fmt.println("________________________________")
     }
-    // fmt.println(ansi.CSI + ansi.FG_CYAN + ansi.SGR + "Hellope!" + ansi.CSI + ansi.RESET + ansi.SGR)
 }
 
