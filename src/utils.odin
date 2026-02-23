@@ -1,4 +1,4 @@
-package tesuteru
+package tcli
 
 import "core:os"
 import "core:fmt"
@@ -40,7 +40,7 @@ handle_flags :: proc(args: ^[]string, config: ^Config) -> Error {
             config.ansimode = false
         } else if arg == "-a" && i + 1 < len(args) {
             if is_number(args[i+1]){
-                val := strconv.atoi(args[i+1])
+                val, _ := strconv.parse_int(args[i+1])
                 if val > 1024 {
                     fmt.println("Too big number, you'll die doing this test")
                     return .Err
@@ -53,7 +53,7 @@ handle_flags :: proc(args: ^[]string, config: ^Config) -> Error {
             }
         } else if arg == "-i" && i + 1 < len(args) {
             if is_number(args[i+1]){
-                val := strconv.atoi(args[i+1])
+                val, _ := strconv.parse_int(args[i+1])
                 if val > 1024 {
                     fmt.println("Too big number, you'll die doing this test")
                     return .Err
@@ -70,7 +70,7 @@ handle_flags :: proc(args: ^[]string, config: ^Config) -> Error {
             }
         } else if arg == "-m" && i + 1 < len(args) {
             if is_number(args[i+1]){
-                val := strconv.atoi(args[i+1])
+                val, _ := strconv.parse_int(args[i+1])
                 if val > 1024 {
                     fmt.println("Too big number, you'll die doing this test")
                     return .Err
@@ -162,7 +162,7 @@ check_the_answer :: proc(
         if part == "" {
             continue
         }
-        val := strconv.atoi(part)
+        val, _ := strconv.parse_int(part)
         append(&selected, val)
     }
 

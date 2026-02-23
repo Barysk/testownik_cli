@@ -1,4 +1,4 @@
-package tesuteru
+package tcli
 
 import "core:fmt"
 import "core:math/rand"
@@ -16,9 +16,9 @@ ANSI_RST :: ansi.CSI + ansi.RESET + ansi.SGR    // reset
 
 print_help :: proc() {
     fmt.println("\n\n" + 
-    " _Tesuteru_HELP________________________________________________ \n" +
+    " __HELP________________________________________________________ \n" +
     "                                                                \n" +
-    "  Usage: tesuteru <path/to/folder> <flags>                      \n" +
+    "  Usage: testownik_cli <path/to/folder> <flags>                 \n" +
     "  Flags:                                                        \n" +
     "  -a <num> - addintional repeats if you failed to answer        \n" +
     "   correctly, default: 1                                        \n" +
@@ -30,7 +30,7 @@ print_help :: proc() {
     "   your term, it not 1975 anymore bruh). Hope your term         \n" +
     "   supprorts UTF-8 at least.                                    \n" +
     " ______________________________________________________________ \n" +
-    "  テステル │ ver1.0.1 │ bk                                      \n" +
+    "  testownik_cli | ver1.0.2 | bk                                 \n" +
     "\n\n")
 }
 

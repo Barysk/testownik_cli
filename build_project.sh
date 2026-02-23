@@ -7,9 +7,9 @@ RED='\033[0;31m'
 NC='\033[0m'
 
 echo -e "${GREEN}Building native release...${NC}"
-odin build src/ -target:linux_amd64 -o:speed -out:linux/tesuteru
+odin build src/ -target:linux_amd64 -o:speed -out:./target/linux/testownik_cli
 echo -e "${GREEN}Done.${NC}"
 
-echo -e "${GREEN}Building x86_64-pc-windows-gnu release...${NC}"
-odin build src/ -target:windows_amd64 -o:speed -linker:lld -out:windows/tesuteru.exe
-echo -e "${GREEN}Done.${NC}"
+# echo -e "${GREEN}Building x86_64-pc-windows-gnu release...${NC}"
+# odin build src/ -target:windows_amd64 -o:speed -linker:lld -out:windows/testownik_cli.exe
+# echo -e "${GREEN}Done.${NC}"

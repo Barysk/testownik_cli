@@ -1,8 +1,8 @@
-# testownik_cli - テステル
+# testownik_cli
 
-テステル is a testownik app for solving tests created by PWr students. This is a terminal version made to be as light as possible – no unneeded interface or, god forbid, .js
+testownik_cli is a testownik app for solving tests created by PWr students. This is a terminal version made to be as light as possible – no unneeded interface or, god forbid, .js
 
-Tesuteru comes from test terminal, if someone was wondering.
+testownik_cli comes from test terminal, if someone was wondering.
 
 ## Installation
 
@@ -12,7 +12,7 @@ Or if you want and you on linux system just move the binary to /usr/local/bin/
 
 ## Usage
 
-```tesuteru <path/to/directory_with_quesions> <flags>```
+```testownik_cli <path/to/directory_with_quesions> <flags>```
 
 ### flags
 ```
@@ -60,11 +60,11 @@ Yes, but one question will be empty
 Yes, but behaviour will be undefined
 ```
 
-Is tesuteru any good? -> Yes.
+Is testownik_cli any good? -> Yes.
 
 ```003.txt
 X010
-Is tesuteru any good?
+Is testownik_cli any good?
 no
 definetly
 maybe
@@ -83,6 +83,6 @@ I does not supported
 
 ## No windows?
 
-For now, yes -> no windows. Why? Becouse ```Linking for cross compilation for this platform is not yet supported (windows amd64)```. So until either support will be provided, either I'll find free windows machine.
-
-Hey you can totally compile if yourself ;)
+Yes, no windows. -> I once compiled for windows, and both windows terminal and
+powershell terminal appeared to be the utter garbage that does not have support
+for utf-8.

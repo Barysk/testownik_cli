@@ -1,4 +1,4 @@
-package tesuteru
+package tcli
 
 import "core:os"
 import "core:fmt"

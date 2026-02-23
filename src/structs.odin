@@ -1,4 +1,4 @@
-package tesuteru
+package tcli
 
 TestingData :: struct {
     completed_questions: u32,
